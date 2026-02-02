@@ -126,6 +126,303 @@
       from { transform: scale(.96); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
+	* {
+  margin:auto;
+  padding:0;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+body {
+  background: #dedede;
+}
+
+.ironman {
+  width: 150px;
+  height: 200px;
+  position: relative;
+  margin: 50px auto;
+}
+
+.head {
+  width: 100%;
+  height: 100px;
+}
+
+.helmet {
+  width: 105px;
+  height: 115px;
+  border: solid 8px rgba(0,0,0,0.5);
+  border-radius: 45px;
+  position: relative;
+  background: #c70305;
+  z-index: 3;
+}
+
+.helmet-inside-fix-left {
+  z-index: 3;
+  position: absolute;
+  left: 23px;
+  top: 3px;
+  width: 15px;
+  height: 3px;
+  background: #630102;
+  transform: rotate(65deg);
+  -webkit-transform: rotate(65deg);
+}
+
+.helmet-inside-fix-right {
+  z-index: 3;
+  position: absolute;
+  right: 23.5px;
+  top: 3px;
+  width: 15px;
+  height: 3px;
+  background: #630102;
+  transform: rotate(-65deg);
+  -webkit-transform: rotate(-65deg);
+}
+
+.helmet-inside-fix {
+  z-index: 3;
+  top: 8px;
+  left: 3px;
+  width: 83px;
+  height: 88px;
+  border-radius: 30px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.helmet-inside {
+  top: 8px;
+  left: 3px;
+  width: 83px;
+  height: 88px;
+  background: #fedb10;
+  border: solid 3px #630102;
+  border-radius: 30px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.helmet-inside-top {
+  position: absolute;
+  z-index: 3;
+  top: -15px;
+  left: 30%;
+  width: 40%;
+  height: 30%;
+  background: #c70305;
+  border: solid 3px #630102;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.helmet-inside-right {
+  position: absolute;
+  z-index: 3;
+  bottom: -10px;
+  right: -15px;
+  width: 35px;
+  height: 40px;
+  border-radius: 40px;
+  border: solid 3px #630102;
+  background: #c70305;
+}
+
+.helmet-inside-left {
+  position: absolute;
+  z-index: 3;
+  bottom: -10px;
+  left: -15px;
+  width: 35px;
+  height: 40px;
+  border-radius: 40px;
+  background: #c70305;
+  border: solid 3px #630102;
+}
+
+.eye-left {
+  position: absolute;
+  left: 11px;
+  top: 30px;
+  background: #fff;
+  width: 20px;
+  height: 7px;
+  border: solid 2.95px rgba(0,0,0,1);
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+}
+
+.eye-right {
+  position: absolute;
+  right: 11px;
+  top: 30px;
+  background: #fff;
+  width: 20px;
+  height: 7px;
+  border: solid 2.95px rgba(0,0,0,1);
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+}
+
+
+.mouth {
+  position: absolute;
+  bottom: 15px;
+  left: calc(50% - 12px);
+  width: 25px;
+  height: 4px;
+  background: #000;
+}
+
+.mouth:before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 4px;
+  right: -15px;
+  top: 3.5px;
+  background: #000;
+  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+}
+
+.mouth:after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 4px;
+  left: -15px;
+  top: 3.5px;
+  background: #000;
+  transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+}
+
+.body {
+  width: 80px;
+  height: 90px;
+  border-radius: 30px;
+  background: #c70305;
+  border: solid 8px rgba(0,0,0,0.5);
+  position: relative;
+  margin-top: -14px;
+}
+
+.heart {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  left: calc(50% - 12px);
+  top: 25px;
+  background: #fff;
+  border: solid 5px #630102;
+}
+
+.arm-left {
+  z-index: -2;
+  position: absolute;
+  width: 50px;
+  height: 18px;
+  top: 8px;
+  left: -25px;
+  border-radius: 12px 0 0 0;
+  border: solid 5px rgba(0,0,0,0.5);
+  background: #c70305;
+}
+
+.arm-left:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  border: solid 5px #630102;
+  background: #fedb10;
+  width: 18px;
+  height: 23px;
+  border-top: 0;
+  top: 13px;
+  left: 0px;
+  border-radius: 0 0 10px 10px;
+}
+
+.arm-left:after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  border: solid 5px rgba(0,0,0,0.6);
+  bottom: -45px;
+  width: 13px;
+  height: 13px;
+  background: #c70305;
+  border-radius: 20px;
+}
+
+.arm-right {
+  z-index: -2;
+  position: absolute;
+  width: 50px;
+  height: 18px;
+  top: 8px;
+  right: -25px;
+  border-radius: 0 12px 0 0;
+  border: solid 5px rgba(0,0,0,0.5);
+  background: #c70305;
+}
+
+.arm-right:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  border: solid 5px #630102;
+  background: #fedb10;
+  width: 18px;
+  height: 23px;
+  border-top: 0;
+  top: 13px;
+  right: 0px;
+  border-radius: 0 0 10px 10px;
+}
+
+.arm-right:after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  border: solid 5px rgba(0,0,0,0.6);
+  bottom: -45px;
+  width: 13px;
+  height: 13px;
+  background: #c70305;
+  border-radius: 20px;
+}
+
+.leg-left {
+  position: absolute;
+  height: 40px;
+  width: 27px;
+  background: #c70305;
+  border: solid 5px rgba(0,0,0,0.6);
+  bottom: -33px;
+  left: 7px;
+  z-index: -1;
+  border-radius: 0 0 0 30px;
+}
+
+.leg-right {
+  position: absolute;
+  height: 40px;
+  width: 27px;
+  background: #c70305;
+  border: solid 5px rgba(0,0,0,0.6);
+  bottom: -33px;
+  right: 7px;
+  z-index: -1;
+  border-radius: 0 0 30px 0;
+}
   </style>
 </head>
 
@@ -134,42 +431,41 @@
 
   <main class="card">
     <!-- ANIMAL WITH HEART -->
-    <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="fur" x1="0" x2="1">
-          <stop offset="0" stop-color="#f7c7a1"/>
-          <stop offset="1" stop-color="#f2a97b"/>
-        </linearGradient>
-        <linearGradient id="heart" x1="0" x2="1">
-          <stop offset="0" stop-color="#ff4d7d"/>
-          <stop offset="1" stop-color="#ff1f68"/>
-        </linearGradient>
-      </defs>
-
-      <path d="M250 50 C250 33 270 25 282 38
-               C294 25 314 33 314 50
-               C314 78 282 92 282 106
-               C282 92 250 78 250 50Z"
-            fill="url(#heart)"/>
-
-      <path d="M90 120 C90 70 140 40 190 60
-               C240 40 290 70 290 120
-               C290 180 240 210 190 210
-               C140 210 90 180 90 120Z"
-            fill="url(#fur)"/>
-
-      <path d="M110 92 L95 55 L140 78 Z" fill="#f2a97b"/>
-      <path d="M270 92 L285 55 L240 78 Z" fill="#f2a97b"/>
-
-      <circle cx="160" cy="130" r="8"/>
-      <circle cx="220" cy="130" r="8"/>
-
-      <path d="M190 144 C186 144 182 148 182 152
-               C182 160 190 164 190 170
-               C190 164 198 160 198 152
-               C198 148 194 144 190 144Z"
-            fill="#ff7aa2"/>
-    </svg>
+    <div class="ironman">
+  <div class="head">
+    <div class="helmet">
+      <div class="helmet-inside-fix">
+        <!-- Face background -->
+        <div class="helmet-inside-top"></div>
+        <div class="helmet-inside-fix-left"></div>
+        <div class="helmet-inside-fix-right"></div>
+        <div class="helmet-inside-right"></div>
+        <div class="helmet-inside-left"></div>  
+      </div>
+      
+      <div class="helmet-inside">  
+        <!-- Eyes -->
+        <div class="eye-left"></div>
+        <div class="eye-right"></div>
+        
+        <!-- Mouth -->
+        <div class="mouth"></div>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <!-- Heart -->
+    <div class="heart"></div>
+    
+    <!-- Arms -->
+    <div class="arm-left"></div>
+    <div class="arm-right"></div>
+    
+    <!-- Legs -->
+    <div class="leg-left"></div>
+    <div class="leg-right"></div>
+  </div>
+</div>
 
     <h1>TT will you be my valentine?</h1>
 
@@ -183,10 +479,9 @@
 
     <section class="result" id="result">
       <h2>YAY! 🎉</h2>
-      <img
-        class="fireworks"
-        src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"
-        alt="Fireworks"
+      <img        
+        src="https://tenor.com/i5wYDnFYpVy.gif"
+		alt="test"        
       />
     </section>
   </main>
